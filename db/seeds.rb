@@ -1,25 +1,30 @@
 require 'faker'
+puts "borrando productos"
+Product.destroy_all
+puts "borrando usuarios"
+User.destroy_all
 
+users = []
+puts "creando usuarios"
+user1 = User.create!(email: "michele@gmail.com", password: "123456")
+puts "usuario: #{user1.email}"
+user2 = User.create!(email: "fran@gmail.com", password: "123456")
+puts "usuario: #{user2.email}"
+user3 = User.create!(email: "caro@gmail.com", password: "123456")
+puts "usuario: #{user3.email}"
+user4 = User.create!(email: "gaston@gmail.com", password: "123456")
+puts "usuario: #{user4.email}"
+users.append(user1, user2, user3, user4)
+puts "usuarios creados"
+puts "creando productos"
 100.times do
-  users = User.new(
-    name: Faker::Name.name
-  )
-end
-
-
-100.times do
-  products = Product.new(
-    name:    Faker::Beer.name,
+  product = Product.new(
+    name: Faker::Beer.name,
     price: Faker::Commerce.price,
-    details:  Faker::Markdown.emphasis
+    details: Faker::Markdown.emphasis,
+    user: users.sample
   )
-  products.save!
+  product.save!
+  puts "producto: #{product.name} usuario: #{product.user.email}"
 end
-
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-# movies = .create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-# character.create(name: "Luke", movie: movies.first)
+puts "fin del ciclo"
