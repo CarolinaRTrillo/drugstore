@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-   @product = Product.new(product_params)
+    @product = Product.new(product_params)
   end
 
   def create
@@ -46,5 +46,4 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
-
 end
