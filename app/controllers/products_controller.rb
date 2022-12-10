@@ -10,11 +10,12 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new(product_params)
+    @product = Product.new()
   end
 
   def create
     @product = Product.new(product_params)
+    @product.user_id = current_user.id
     if @product.save
       redirect_to product_path(@product)
     else
@@ -26,21 +27,19 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update(params[:product])
-
+    @product.update(product_params)
     redirect_to product_path(@product)
   end
 
   def destroy
     @product.destroy
-
-    redirect_to product_path, status: :see_other
+    redirect_to products_path, status: :see_other
   end
 
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :details)
+    params.require(:product).permit(:name, :price, :details, :photo)
   end
 
   def set_product
