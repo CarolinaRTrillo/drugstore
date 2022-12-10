@@ -9,19 +9,19 @@ users = []
 puts "creando usuarios"
 
 user1 = User.create!(email: "michele@gmail.com", password: "123456")
-file = URI.open( "https://avatars.githubusercontent.com/u/48396891?v=4")
+file = URI.open("https://avatars.githubusercontent.com/u/48396891?v=4")
 user1.photo.attach(io: file, filename: "michele.png", content_type: "image/png")
 puts "usuario: #{user1.email}"
 user2 = User.create!(email: "fran@gmail.com", password: "123456")
-file = URI.open( "https://avatars.githubusercontent.com/u/96851608?v=4")
+file = URI.open("https://avatars.githubusercontent.com/u/96851608?v=4")
 user2.photo.attach(io: file, filename: "fran.png", content_type: "image/png")
 puts "usuario: #{user2.email}"
 user3 = User.create!(email: "caro@gmail.com", password: "123456")
-file = URI.open( "https://avatars.githubusercontent.com/u/103596286?v=4")
+file = URI.open("https://avatars.githubusercontent.com/u/103596286?v=4")
 user3.photo.attach(io: file, filename: "caro.png", content_type: "image/png")
 puts "usuario: #{user3.email}"
 user4 = User.create!(email: "gaston@gmail.com", password: "123456")
-file = URI.open( "https://avatars.githubusercontent.com/u/111038358?v=4")
+file = URI.open("https://avatars.githubusercontent.com/u/111038358?v=4")
 user4.photo.attach(io: file, filename: "gaston.png", content_type: "image/png")
 puts "usuario: #{user4.email}"
 users.append(user1, user2, user3, user4)
@@ -61,7 +61,8 @@ product4 = Product.new(
   price: 2700,
   details: "Pisco es la denominación de un aguardiente de uvas, producido en Chile y Perú, elaborado fundamentalmente mediante la destilación del producto de la vid, como el brandy y el coñac, pero sin la prolongada crianza en barricas de madera.
   ",
-  user: users.sample )
+  user: users.sample
+)
 file = URI.open("https://images.unsplash.com/photo-1639016618261-f8b4ff879510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
 product4.photo.attach(io: file, filename: "pisco.png", content_type: "image/png")
 product4.save!
@@ -71,7 +72,8 @@ product5 = Product.new(
   price: 4000,
   details: "El tequila es una bebida alcohólica obtenida del destilado, originaria de Tequila, en el estado de Jalisco, México.
   ",
-  user: users.sample )
+  user: users.sample
+)
 file = URI.open("https://images.unsplash.com/photo-1642382597250-f1d80472917b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
 product5.photo.attach(io: file, filename: "tequila.png", content_type: "image/png")
 product5.save!
