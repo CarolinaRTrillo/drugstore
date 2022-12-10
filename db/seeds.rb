@@ -36,8 +36,8 @@ product1 = Product.new(
 file = URI.open("https://images.unsplash.com/photo-1614313511387-1436a4480ebb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
 product1.photo.attach(io: file, filename: "fernet.png", content_type: "image/png")
 product1.save!
-
-product2 =Product.new(
+puts "producto 1 creado"
+product2 = Product.new(
   name: "Lester Gin",
   price: 3000,
   details: "El Gin está hecho de un destilado neutro de grano, infusionado con bayas de enebro y otros ingredientes botánicos como frutas, semillas y especias. Este destiladose produce usando un alambique continuo (destilación continua), con los botánicos -predominantemente bayas de enebro- agregadas para dar sabor al líquido.",
@@ -45,7 +45,7 @@ product2 =Product.new(
 file = URI.open("https://images.unsplash.com/photo-1610122525533-61e2f1dcee1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
 product2.photo.attach(io: file, filename: "Lestergin.png", content_type: "image/png")
 product2.save!
-
+puts "producto 2 creado"
 product3 = Product.new(
   name: " vino ",
   price: 2500,
@@ -55,7 +55,7 @@ product3 = Product.new(
 file = URI.open("https://images.unsplash.com/photo-1609790026016-54ace8b92d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=625&q=80")
 product3.photo.attach(io: file, filename: "vino.png", content_type: "image/png")
 product3.save!
-
+puts "producto 3 creado"
 product4 = Product.new(
   name: "Pisco",
   price: 2700,
@@ -66,7 +66,7 @@ product4 = Product.new(
 file = URI.open("https://images.unsplash.com/photo-1639016618261-f8b4ff879510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
 product4.photo.attach(io: file, filename: "pisco.png", content_type: "image/png")
 product4.save!
-
+puts "producto 4 creado"
 product5 = Product.new(
   name: "Tequila",
   price: 4000,
@@ -77,5 +77,5 @@ product5 = Product.new(
 file = URI.open("https://images.unsplash.com/photo-1642382597250-f1d80472917b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
 product5.photo.attach(io: file, filename: "tequila.png", content_type: "image/png")
 product5.save!
-
+puts "producto 5 creado"
 puts "fin del ciclo"
