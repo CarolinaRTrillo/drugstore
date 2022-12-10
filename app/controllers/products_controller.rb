@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show, :new ]
+  skip_before_action :authenticate_user!, only: [ :index ]
   before_action :set_product, only: [ :show, :edit, :update, :destroy ]
 
   def index
@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.user_id = current_user.id
     if @product.save
-      raise
       redirect_to product_path(@product)
     else
       render :new

@@ -8,8 +8,8 @@
         <%= submit_tag "Buscar", class: "btn btn-outline-search" %>
         <% end %>
       </div>
-        <a class="navbar-brand" href="#">Home</a>
-        <a class="navbar-brand" aria-current="page" href="#">Products</a>
+        <%= link_to "Productos", products_path, class: "navbar-brand nav-link" %>
+        <%= link_to "Crear Producto", new_product_path, class: "navbar-brand nav-link" %>
         <a class="navbar-brand" href="#">Contact us</a>
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
