@@ -8,3 +8,36 @@
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
 }
+
+.product-card {
+  text-decoration: none;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px !important;
+  padding: 20px;
+  justify-content: center;
+  img {
+
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
+  a {
+    display: inline;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+}
+.product-card-content {
+  h5 {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+  p{
+    color:black;
+  }
+}

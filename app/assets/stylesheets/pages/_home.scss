@@ -1,1 +1,8 @@
 // Specific CSS for your home-page
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 16px;
+
+
+}

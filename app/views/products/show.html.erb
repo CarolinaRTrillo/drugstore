@@ -1,10 +1,16 @@
-<%= @product.name %>
-<%= @product.price %>
-<%= @product.details %>
-<%= cl_image_tag @product.photo.key, class: "radio-imagen", height: 350, crop: :fill %>
-
-
-<% if @product.user_id == current_user.id %>
-  <%= link_to "Delete", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"} %>
-  <%= link_to "Edit", edit_product_path(@product) %>
-<% end %>
+<div style="background-color: #15395b;">
+<div class="description justify-content-center" >
+  <h1 style="color: white;"><%= @product.name  %></h1>
+  <h2 style="color: white;"><%= @product.price  %></h2>
+  <p style="color: white;"><%= @product.details %></p>
+</div>
+<div class="image ">
+  <%= cl_image_tag @product.photo.key, class: "radio-imagen", height: 350, crop: :fill %>
+</div>
+<div>
+    <% if @product.user_id == current_user.id %>
+      <%= link_to "Delete", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"} %>
+      <%= link_to "Edit", edit_product_path(@product) %>
+    <% end %>
+</div>
+</div>
