@@ -1,23 +1,25 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="background-color: #DDDDDD;">
-    <img src="/assets/Logo.png" width="80" height="80" alt="" class="rounded-circle mx-4"/>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="background-color: white;">
+<%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag  "/assets/Logo.png", class:"logo-navbar" %>
+    <% end %>
     <div class="collapse ms-auto navbar-collapse" id="navbarSupportedContent">
-      <div>
+    <div class="container">
+      <div class="buscar">
         <%= form_with url: products_path, class: "d-flex", method: :get do %>
         <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Buscar productos" %>
-        <%= submit_tag "Buscar", class: "btn btn-outline-search" %>
+        <%= submit_tag "Buscar", class: "btn btn-primary" %>
         <% end %>
+      </div>
       </div>
         <%= link_to "Productos", products_path, class: "navbar-brand nav-link" %>
         <%= link_to "Crear Producto", new_product_path, class: "navbar-brand nav-link" %>
-        <a class="navbar-brand" href="#">Contact us</a>
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
               <% if current_user.photo.key %>
                 <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle mx-4", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Action", "#", class: "dropdown-item" %>
-                <%= link_to "Another action", "#", class: "dropdown-item" %>
+                <%= link_to "Profile", products_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class:  "dropdown-item" %>
               </div>
               <% else %>
