@@ -4,6 +4,14 @@
   <h2 style="color: white;"><%= @product.price  %></h2>
   <p style="color: white;"><%= @product.details %></p>
 </div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @product.name  %></h5>
+    <h6 class="card-title"><%= @product.price  %></h6>
+    <p style="color: black;"><%= @product.details %></p>
+    <a href="#" class="btn btn-primary">Comprar</a>
+  </div>
+</div>
 <div class="image ">
   <%= cl_image_tag @product.photo.key, class: "radio-imagen", height: 350, crop: :fill %>
 </div>
