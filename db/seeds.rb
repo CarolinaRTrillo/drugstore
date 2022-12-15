@@ -47,7 +47,7 @@ product2.photo.attach(io: file, filename: "Lestergin.png", content_type: "image/
 product2.save!
 puts "producto 2 creado"
 product3 = Product.new(
-  name: " vino ",
+  name: "Vino",
   price: 2500,
   details: "El vino tinto es un tesoro natural rico en polifenoles, siendo uno de ellos el citado resveratrol, sustancia química rica en antioxidantes que, según la Clínica Mayo, nos ayuda a cuidar nuestros vasos sanguíneos ya que evita la formación de coágulos y la reducción del llamado colesterol malo
   ",

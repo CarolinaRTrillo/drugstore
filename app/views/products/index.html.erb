@@ -6,7 +6,7 @@
       <div class="product-card">
       <%= link_to product_path(product) do %>
 
-        <div class="d-flex justify-content-center"><%# <img src="" class="card-img-top" alt="..."> %>
+        <div class="d-flex justify-content-center">
           <% if product.photo.key != nil %>
             <%= cl_image_tag product.photo.key %>
           <% end %>
