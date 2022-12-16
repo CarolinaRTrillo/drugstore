@@ -6,13 +6,13 @@
     <div class="container">
       <div class="buscar">
         <%= form_with url: products_path, class: "d-flex", method: :get do %>
-        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Buscar productos" %>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Buscar Bebidas" %>
         <%= submit_tag "Buscar", class: "btn btn-primary" %>
         <% end %>
       </div>
       </div>
-        <%= link_to "Productos", products_path, class: "navbar-brand nav-link" %>
-        <%= link_to "Crear Producto", new_product_path, class: "navbar-brand nav-link" %>
+        <%= link_to "Bebidas", products_path, class: "navbar-brand nav-link" %>
+        <%= link_to "Crear Bebida", new_product_path, class: "navbar-brand nav-link" %>
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
