@@ -1,26 +1,79 @@
-<div style="background-color: white;">
+<!-- <%# <div style="background-color: white;">
   <div class="container pt-5 " >
     <div class="product-container" >
       <% @products.each do |product| %>
 
-      <div class="product-card">
+      <%# <div class="product-card">
       <%= link_to product_path(product) do %>
 
-        <div class="d-flex justify-content-center">
+        <%# <div class="d-flex justify-content-center">
           <% if product.photo.key != nil %>
-            <%= cl_image_tag product.photo.key %>
-          <% end %>
-        </div>
-          <div class="product-card-content">
+            <%# <%= cl_image_tag product.photo.key %> %>
+          <%# <% end %>
+        <%# </div> %>
+          <%# <div class="product-card-content">
             <h5><%= product.name %></h5>
-            <p><%= product.details.truncate(80) %></p>
+            <%# <p><%= product.details.truncate(80) %></p>
 
-          </div>
+          <%# </div> %>
 
-      <% end %>
-      </div>
-    <% end %>
+      <%# <% end %>
+      <%# </div> %>
+    <%# <% end %>
 
     </div>
   </div>
+</div> -->
+
+
+<div class="container mt-5">
+  <div class="row product-container">
+    <% @products.each do |product| %>
+        <%= link_to product_path(product) do %>
+          <div class="col">
+            <div class="card" style="width: 15rem; border-radius: 8px 8px 8px 8px;">
+              <% if product.photo.key != nil %>
+                <%= cl_image_tag product.photo.key %>
+              <% end %>
+              <div class="card-body">
+                <h5 class="card-title"><%= product.name %></h5>
+                <p class="card-text ov-text"><%= product.details %></p>
+                <%= link_to "Ver detalles", product_path(product), class: "btn btn-primary mt-3" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
 </div>
+
+    <%# <div class="col">
+      <div class="card" style="width: 15rem; border-radius: 8px 8px 8px 8px;">
+        <img src="https://res.cloudinary.com/drd7kavdp/image/upload/c_scale,h_250,w_350/v1671120834/ron_card_2_xfuziu.png" class="card-img-top" alt="..." style="border-radius: 8px 8px 0 0;">
+        <div class="card-body">
+          <h5 class="card-title">Ron</h5>
+          <p class="card-text ov-text">El ron es un licor alcohólico destilado, obtenido del jugo o de la melaza de la caña de azúcar. Usualmente es un sub-producto de la fabricación del azúcar. Incluye a los tipos claros y ligeros, típicos de la República Dominicana, Cuba y Puerto Rico, y los más pesados y de sabor más intenso como los de Jamaica.</p>
+          <a href="#" class="btn btn-primary">Ver detalles</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem; border-radius: 8px 8px 8px 8px;">
+        <img src="https://res.cloudinary.com/drd7kavdp/image/upload/c_scale,h_250,w_350/v1671120830/wine_card_3_cbynfw.avif" class="card-img-top" alt="..." style="border-radius: 8px 8px 0 0;">
+        <div class="card-body">
+          <h5 class="card-title">Vino</h5>
+          <p class="card-text ov-text">El vino es, exclusivamente, la bebida resultante de la fermentación alcohólica, completa o parcial, de uvas frescas, estrujadas o no, o de mosto de uva. Su contenido en alcohol adquirido no puede ser inferior a 8,5% vol.</p>
+          <a href="#" class="btn btn-primary">Ver detalles</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem; border-radius: 8px 8px 8px 8px;">
+        <img src="https://res.cloudinary.com/drd7kavdp/image/upload/c_scale,h_250,w_350/v1671120830/vodka_card_4_d0gmcz.avif" class="card-img-top" alt="..." style="border-radius: 8px 8px 0 0;">
+        <div class="card-body">
+          <h5 class="card-title">Vodka</h5>
+          <p class="card-text ov-text">Conocida como una de las bebidas alcohólicas más fuertes y potentes del mercado, el vodka es una bebida destilada de origen ruso. Con un tenor alcohólico que puede ir de 35 a 50 por ciento, es sin dudas una de las bebidas más duras ya que está compuesta solamente por agua y etanol a diferencia de otras bebidas alcohólicas que cuentan con otros ingredientes y sabores.</p>
+          <a href="#" class="btn btn-primary">Ver detalles</a>
+        </div>
+      </div>
+    </div> %>
