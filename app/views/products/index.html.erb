@@ -29,7 +29,6 @@
 <div class="container mt-5">
   <div class="row product-container">
     <% @products.each do |product| %>
-        <%= link_to product_path(product) do %>
           <div class="col">
             <div class="card" style="width: 15rem; border-radius: 8px 8px 8px 8px;">
               <% if product.photo.key != nil %>
@@ -42,7 +41,6 @@
               </div>
             </div>
           </div>
-        <% end %>
       <% end %>
   </div>
 </div>
