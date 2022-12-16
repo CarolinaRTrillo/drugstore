@@ -4,7 +4,7 @@
     <% end %>
     <div class="collapse ms-auto navbar-collapse" id="navbarSupportedContent">
     <div class="container">
-      <div class="buscar">
+      <div class="buscar me-5">
         <%= form_with url: products_path, class: "d-flex", method: :get do %>
         <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Buscar Bebidas" %>
         <%= submit_tag "Buscar", class: "btn btn-primary" %>
