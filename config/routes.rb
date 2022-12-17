@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :products
   resources :sales
+  get "nosotros", to: "pages#nosotros"
+  get "contacto", to: "pages#contacto"
   # Defines the root path route ("/")
   # root "articles#index"
 end
