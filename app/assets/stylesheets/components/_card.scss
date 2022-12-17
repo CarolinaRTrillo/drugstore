@@ -34,9 +34,10 @@
 
 .product-container {
   padding: 20px 0px;
+  padding-left: 90px;
   a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 
   img {
@@ -44,4 +45,10 @@
     width: 100%;
     margin-top: 5px;
   }
+}
+.title{
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
+
 }
