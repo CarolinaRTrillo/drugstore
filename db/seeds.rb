@@ -91,7 +91,7 @@ product6.save!
 puts "producto 6 creado"
 
 product7 = Product.new(
-  name: "vodka",
+  name: "Vodka",
   price: 2000,
   details: "Conocida como una de las bebidas alcohólicas más fuertes y potentes del mercado, el vodka es una bebida destilada de origen ruso. Con un tenor alcohólico que puede ir de 35 a 50 por ciento, es sin dudas una de las bebidas más duras ya que está compuesta solamente por agua y etanol a diferencia de otras bebidas alcohólicas que cuentan con otros ingredientes y sabores.",
   user: users.sample
@@ -113,7 +113,7 @@ product8.save!
 puts "producto 8 creado"
 
 product9 = Product.new(
-  name: "wishky",
+  name: "Wishky",
   price: 4500,
   details: "Es un destilado de cereal envejecido en barricas de madera. Los pioneros en destilarlo y formalizar el proceso de elaboración fueron monjes, de ellos pasó a los campesinos que instalaron infinidad de alambiques caseros. Actualmente, el whisky es el más preciado en el mercado de aguardientes.",
   user: users.sample
