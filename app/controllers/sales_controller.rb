@@ -13,6 +13,10 @@ class SalesController < ApplicationController
   def show
   end
 
+  def sold_product
+
+  end
+
   private
 
   def set_product
