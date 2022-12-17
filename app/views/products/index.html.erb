@@ -3,9 +3,9 @@
   <div class="row product-container">
     <% @products.each do |product| %>
           <div class="col">
-            <div class="card" style="width: 15rem; box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); border-radius: 8px 8px 8px 8px;">
+            <div class="card" style="box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); border-radius: 8px 8px 8px 8px;">
               <% if product.photo.key != nil %>
-                <%= cl_image_tag product.photo.key %>
+                <%= cl_image_tag product.photo.key, class:"img-card card-img-top"%>
               <% end %>
               <div class="card-body">
                 <h5 class="card-title"><%= product.name %></h5>
