@@ -5,7 +5,7 @@
       <h1 style="color: black;"><%= @product.name  %></h1>
         <h2 style="color: black;"><%= @product.price  %> ARS </h2>
         <p style="color: black;"><%= @product.details %></p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <a href="<%= sold_path %>" class="btn btn-primary">Comprar</a>
         <div class= "card-product-infos" >
           <% if @product.user_id == current_user.id %>
           <%= link_to "Delete", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"}, class: "btn btn-secondary" %>
