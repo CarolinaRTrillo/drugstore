@@ -1,9 +1,39 @@
+
 <div class="container">
 <%= simple_form_for @product do |f| %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :details %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+<section class="vh-100" style="background-color: white;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 0.5rem;">
+          <div class="card-body p-5 text-center " style="box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.4); border-radius: 8px 8px 8px 8px;">
+
+            <h3 class="mb-5">Crear bebida</h3>
+
+            <div class="form-outline mb-4">
+            <%= f.input :name, class: "form-control form-control-lg" %>
+            </div>
+
+            <div class="form-outline mb-4">
+            <%= f.input :price, class:"form-control form-control-lg" %>
+            </div>
+
+            <div class="form-outline mb-4">
+            <%=  f.input :details, class: "form-control form-control-lg" %>
+            </div>
+
+            <div class="form-outline mb-4">
+            <%= f.input :photo, as: :file, class: "form-control form-control-lg" %>
+            </div>
+
+
+              <%= f.button :submit, "Crear", class:"btn btn-primary btn-lg btn-block mt-3" %>
+            <hr class="my-4">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <% end %>
-</div>
