@@ -10,7 +10,7 @@
               <div class="card-body">
                 <h5 class="card-title"><%= product.name %></h5>
                 <p class="card-text ov-text"><%= product.details %></p>
-                <%= link_to "Ver detalles", product_path(product), class: "btn btn-primary mt-3" %>
+                <%= link_to "Ver detalles", product_path(product), class: "btn btn-primary mt-3" %> <%= product.price %> ARS
               </div>
             </div>
           </div>
