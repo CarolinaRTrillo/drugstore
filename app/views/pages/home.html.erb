@@ -29,7 +29,7 @@
         <%= cl_image_tag product.photo.key, class:"img-card card-img-top" %>
         </div>
         <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
+          <h5 class="card-title"><%= product.name  %> <h5><%= product.price %> ARS</h5> </h5>
           <p class="card-text ov-text"><%= product.details.truncate(100) %></p>
          <%= link_to "ver detalles" , product_path(product.id), class: "btn btn-primary"%>
         </div>

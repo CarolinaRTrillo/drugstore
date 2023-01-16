@@ -8,9 +8,9 @@
                 <%= cl_image_tag product.photo.key, class:"img-card card-img-top"%>
               <% end %>
               <div class="card-body">
-                <h5 class="card-title"><%= product.name %></h5>
+                <h5 class="card-title" ><%= product.name.upcase %> <h5> <%= product.price %> ARS</h5></h5>
                 <p class="card-text ov-text"><%= product.details %></p>
-                <%= link_to "Ver detalles", product_path(product), class: "btn btn-primary mt-3" %> <%= product.price %> ARS
+                <%= link_to "Ver detalles", product_path(product), class: "btn btn-primary mt-3" %>
               </div>
             </div>
           </div>
